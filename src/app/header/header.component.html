@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top" *ngIf="getLoginStatus()">
+    <div class="container">
+        <a class="navbar-brand" routerLink="fasilitas">
+            <img src="https://cdn.worldvectorlogo.com/logos/angular-3.svg" width="120" height="30" class="d-inline-block allign-top" alt="Image-Logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/fasilitas">Fasilitas
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/user/favorites">Favorit</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/user/booking">Pemesanan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/user/profile">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="aboutUs">Tentang Kami</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark" *ngIf="!getLoginStatus()">
+    <div class="container">
+        <a class="navbar-brand" href="#">Angular</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link active" href="">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item btn btn-primary button1" routerLink="login">Login</a>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,31 @@
+<div class="update-container d-flex align-items-center justify-content-center">
+    <form [formGroup]="formUpdate" novalidate class="update-form">
+        <h3 class="mb-3 font-weight-light text-uppercase text-center">Update Fasilitas</h3>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="nama" name="nama" value="{{ fasilitas.result.nama }}" placeholder="Nama">
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="fakultas" name="fakultas" value="{{ fasilitas.result.fakultas }}" placeholder="alamat">
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="gambar" name="gambar" value="{{ fasilitas.result.gambar }}" placeholder="gambar">
+        </div>
+
+        <div class="form-group">
+            <textarea class="form-control" formControlName="deskripsi" name="deskripsi" value="{{ fasilitas.result.deskripsi }}" placeholder="deskripsi"></textarea>
+        </div>
+
+        <div class="form-group">
+            <input type="time" class="form-control" formControlName="jam_buka" name="jam_buka" placeholder="jam_buka" value="{{ fasilitas.result.jam_buka }}">
+        </div>
+
+        <div class="form-group">
+            <input type="time" class="form-control" formControlName="jam_tutup" name="jam_tutup" placeholder="jam_tutup" value="{{ fasilitas.result.jam_tutup }}">
+        </div>
+
+        <button class="btn btn-primary btn-block" (click)="submitUpdate()">Update</button>
+
+    </form>
+</div>

@@ -1,0 +1,23 @@
+<h2 class="text-center text-dark">Booked</h2>
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th scope="col">User Name</th>
+            <th scope="col">Nama Fasilitas</th>
+            <th scope="col">Tanggal</th>
+            <th scope="col">Jam Pesan</th>
+            <th scope="col">Jam Selesai</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ result?.user_name }}</td>
+            <td>{{ result?.nama }}</td>
+            <td>{{ result?.tanggal }}</td>
+            <td>{{ result?.jam_pesan }}</td>
+            <td>{{ result?.jam_selesai }}</td>
+            <td><button class="btn-primary" (click)="deleteBooking(result.kode)">Delete Pemesanan</button></td>
+        </tr>
+    </tbody>
+</table>

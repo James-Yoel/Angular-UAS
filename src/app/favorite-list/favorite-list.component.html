@@ -1,0 +1,19 @@
+<h2 class="text-center text-dark">Favorite</h2>
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th scope="col">User Name</th>
+            <th scope="col">Tipe</th>
+            <th scope="col">ID_Kode_NIM_ISBN</th>
+            <th scope="col">DELETE</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let favorites of favorite?.result">
+            <td>{{ favorites?.user_name }}</td>
+            <td>{{ favorites?.type }}</td>
+            <td>{{ favorites?.id_kode_nim_isbn_favorited }}</td>
+            <td><button class="btn-primary" (click)="deleteFavorites(favorites.id_kode_nim_isbn_favorited, favorites.type)">Delete Favorite</button></td>
+        </tr>
+    </tbody>
+</table>

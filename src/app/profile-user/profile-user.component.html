@@ -1,0 +1,30 @@
+<div class="container">
+    <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Profile</h1>
+    <hr class="mt-2 mb-5">
+    <div class="card">
+        <div class="container-fliud">
+            <div class="wrapper row">
+                <div class="preview col-md-6">
+                    <div class="preview-pic tab-content">
+                        <div class="tab-pane active" id="pic-1"><img src="{{ profile.result.user.foto }}"></div>
+                        <div style="padding-bottom: 2em ;"></div>
+                        <div class="action">
+                            <button class="btn btn-default" type="button" routerLink="/user/profile/update">Update Profile</button>
+                            <span style="font-size: 2rem;">   |   </span>
+                            <button class="btn btn-default" type="button" (click)="logOut()">Log Out</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="details col-md-6">
+                    <h3 class="product-title">{{ profile.result.user.user_name }}</h3>
+                    <h5>Telepon: {{ profile.result.user.telepon }}</h5>
+                    <h5>Email: {{ profile.result.user.email }}</h5>
+                    <h5>Nama Lengkap: {{ profile.result.user.nama_lengkap }}</h5>
+                    <h5>Alamat: {{ profile.result.user.alamat }}</h5>
+                    <h5>Tanggal Lahir: {{ profile.result.user.tanggal_lahir }}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="padding-bottom: 3em ;"></div>

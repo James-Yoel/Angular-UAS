@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/*Global*/
+
+
+/* Navbar Section*/
+
+.navbar {
+    z-index: 2;
+    position: relative;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: white !important;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.nav-link {
+    text-transform: uppercase;
+    margin-right: 40px;
+    color: white !important;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.nav-link:hover::after {
+    content: '';
+    display: block;
+    border-bottom: 3px solid blue;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+}
+
+.button1 {
+    text-transform: uppercase;
+    border-radius: 40px;
+}
+
+.bd-example {
+    margin-top: -100px;
+    position: relative;
+}
+
+.bd-example::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    position: absolute;
+    bottom: 0;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-caption {
+    bottom: 250px;
+}
+
+.carousel-caption h5 {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.carousel-caption p {
+    width: 75%;
+    margin: auto;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* About this project */
+
+.our-cust {
+    margin-top: 1rem;
+    color: #bbbbbb;
+    padding: 2
+}
+
+.org {
+    max-height: 30px;
+}
+
+.card {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    margin: 2rem 1rem 2rem 0;
+}
+
+.card h5::after {
+    content: ' ';
+    display: block;
+    border-bottom: 3px solid #bbbbbb;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+}

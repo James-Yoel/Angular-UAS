@@ -1,0 +1,35 @@
+<div class="update-container d-flex align-items-center justify-content-center">
+    <form [formGroup]="formAdd" novalidate class="update-form">
+        <h3 class="mb-3 font-weight-light text-uppercase text-center">Add Fasilitas</h3>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="kode" name="kode" placeholder="Kode">
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="nama" name="nama" placeholder="nama">
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="fakultas" name="fakultas" placeholder="fakultas">
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="gambar" name="gambar" placeholder="gambar">
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="deskripsi" name="deskripsi" placeholder="deskripsi">
+        </div>
+
+        <div class="form-group">
+            <input type="time" class="form-control" formControlName="jam_buka" name="jam_buka" placeholder="jam_buka">
+        </div>
+
+        <div class="form-group">
+            <input type="time" class="form-control" formControlName="jam_tutup" name="jam_tutup" placeholder="jam_tutup">
+        </div>
+
+        <button class="btn btn-primary btn-block" (click)="submitAdd()">Submit</button>
+
+    </form>
+</div>

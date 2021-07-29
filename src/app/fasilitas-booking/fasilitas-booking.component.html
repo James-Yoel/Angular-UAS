@@ -1,0 +1,31 @@
+<div class="update-container d-flex align-items-center justify-content-center">
+    <form [formGroup]="formBooking" novalidate class="update-form">
+        <h3 class="mb-3 font-weight-light text-uppercase text-center">Pesan Fasilitas</h3>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="user_name" name="user_name" value="{{ profile.result.user.user_name }}" placeholder="username">
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="nama" name="nama" value="{{ fasilitas.result.nama }}" placeholder="nama fasilitas">
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="kode" name="kode" value="{{ fasilitas.result.kode }}" placeholder="kode fasilitas">
+        </div>
+
+        <div class="form-group">
+            <input type="date" class="form-control" formControlName="tanggal" name="tanggal" value="{{ fasilitas.result.tanggal }}" placeholder="tanggal pemesanan">
+        </div>
+
+        <div class="form-group">
+            <input type="time" class="form-control" formControlName="jam_pesan" name="jam_pesan" placeholder="jam pesan">
+        </div>
+
+        <div class="form-group">
+            <input type="time" class="form-control" formControlName="jam_selesai" name="jam_selesai" placeholder="jam selesai">
+        </div>
+
+        <button class="btn btn-primary btn-block" (click)="submitBooking()">Submit</button>
+
+    </form>
+</div>

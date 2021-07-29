@@ -1,0 +1,25 @@
+<div class="container align-items-center justify-content-center">
+    <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Detail</h1>
+    <hr class="mt-2 mb-5">
+    <div class="card">
+        <div class="container-fluid">
+            <div class="preview col-md-12">
+                <div class="preview-pic tab-content">
+                    <div class="tab-pane active" id="pic-1"><img src="{{ fasilitas.result.gambar }}"></div>
+                </div>
+                <h3 class="product-title">{{ fasilitas.result.nama }}</h3>
+                <h4><strong>{{ fasilitas.result.kode }} -- {{ fasilitas.result.fakultas }}</strong></h4>
+                <h4 class="vote">Jam Buka: {{ fasilitas.result.jam_buka }} -- {{ fasilitas.result.jam_tutup }}</h4>
+                <p class="product-description text-justify">{{ fasilitas.result.deskripsi }}</p>
+                <div class="action">
+                    <button class="add-to-cart btn btn-default" type="button" (click)="addToFavorite(fasilitas.result.kode)">Tambahkan ke Favorit</button>
+                    <span style="font-size: 2rem;">   |   </span>
+                    <button class="like btn btn-default" type="button" routerLink="/fasilitas/{{ fasilitas.result.kode }}/booking">Pesan Fasilitas!</button>
+                    <span style="font-size: 2rem;">   |   </span>
+                    <button class="like btn btn-default" type="button" routerLink="/fasilitas/{{ fasilitas.result.kode }}/update">Update Fasilitas</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="padding-bottom: 3em ;"></div>

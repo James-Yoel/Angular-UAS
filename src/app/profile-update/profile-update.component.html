@@ -1,0 +1,27 @@
+<div class="update-container d-flex align-items-center justify-content-center">
+      <form [formGroup]="formUpdate" novalidate class="update-form">
+          <h3 class="mb-3 font-weight-light text-uppercase text-center">Update Profil</h3>
+          <div class="form-group">
+              <input type="text" class="form-control" formControlName="nama_lengkap" name="nama_lengkap" value="{{ profile.result.user.nama_lengkap }}" placeholder="Nama Lengkap">
+          </div>
+  
+          <div class="form-group">
+              <input type="text" class="form-control" formControlName="alamat" name="alamat" value="{{ profile.result.user.alamat }}" placeholder="alamat">
+          </div>
+  
+          <div class="form-group">
+              <input type="date" class="form-control" formControlName="tanggal_lahir" name="tanggal_lahir" value="{{ profile.result.user.tanggal_lahir }}" placeholder="Tanggal Lahir">
+          </div>
+  
+          <div class="form-group">
+              <input type="text" class="form-control" formControlName="foto" name="foto" value="{{ profile.result.user.foto }}" placeholder="Link Foto">
+          </div>
+  
+          <div class="form-group">
+              <input type="password" class="form-control" formControlName="password" name="password" placeholder="Password">
+          </div>
+  
+          <button class="btn btn-primary btn-block" (click)="submitUpdate()">Update</button>
+  
+      </form>
+  </div>

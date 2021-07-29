@@ -1,0 +1,23 @@
+<div class="container">
+    <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Fasilitas</h1>
+    <button class="like btn btn-default" type="button" routerLink="/add/fasilitas">+ Add New Fasilitas</button>
+    <hr class="mt-2 mb-5">
+      <div class="row text-center text-lg-left">
+        <div class="col-lg-3 col-md-4 col-6" *ngFor="let list of fasilitas.result.fasilitas" routerLink="./{{ list.kode }}">
+          <div class="d-block mb-4 h-100">
+            <div class="card">
+              <div class="hovereffect">
+                <img class="img-fluid img-responsive" src="{{ list.gambar }}" alt="">
+                  <div class="overlay">
+                      <h2>See Details</h2>
+                  </div>
+              </div>
+              <div class="card-body">
+                  <p class="card-text">{{ list.nama }}</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
